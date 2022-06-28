@@ -1,3 +1,4 @@
+
 // 1. step "input for both of depo-withd"
 function getInputValue(inputId){
 
