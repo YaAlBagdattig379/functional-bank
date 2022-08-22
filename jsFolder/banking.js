@@ -1,7 +1,5 @@
-
 // 1. step "input for both of depo-withd"
 function getInputValue(inputId){
-
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
     const amountValue = parseFloat(inputAmountText);
@@ -11,7 +9,6 @@ function getInputValue(inputId){
 }
 // 2. step "totalAdditionalField for depo-withd"
 function updateTotalField(totalFieldId,amount){
-   
     const totalElement = document.getElementById(totalFieldId);
     const totalText = totalElement.innerText;
     const previousTotal = parseFloat(totalText)
@@ -19,7 +16,6 @@ function updateTotalField(totalFieldId,amount){
 }
 // 3. step "updateBalance after depo-withd" 
 function updateBalance(amount, isAdd){
-
     const balanceTotal = document.getElementById('balance-total');
     // const balanceTotalText = balanceTotal.innerText;
     // const previousBalanceTotal = parseFloat(balanceTotalText);
@@ -33,7 +29,6 @@ function updateBalance(amount, isAdd){
     }
 // 4. step "get current balance from total bank balance / limited money"
 function getCurrentBalance(){
-
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
@@ -100,7 +95,6 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
     // const previousBalanceTotal = parseFloat(balanceTotalText);
     // balanceTotal.innerText = previousBalanceTotal - withdrawAmount;
    
-       
         const withdrawAmount =  getInputValue('withdraw-input');
         // // for NaN and limited money
         const currentBalance = getCurrentBalance();
@@ -112,3 +106,4 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
             console.log('you can not get money.')
         }
 })
+

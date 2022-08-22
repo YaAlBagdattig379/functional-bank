@@ -1,4 +1,5 @@
 /*
+// 1. step "input for both of depo-withd"
 function getInputValue(inputId){
     const inputField = document.getElementById(inputId);
     const inputAmountText = inputField.value;
@@ -7,12 +8,14 @@ function getInputValue(inputId){
     inputField.value = '';
     return amountvalue;
 }
+// 2. step "totalAdditionalField for depo-withd"
 function updateTotalField(totalFieldId ,amount){
     const totalElement = document.getElementById(totalFieldId);
     const totalText = totalElement.innerText;
     const previousTotal = parseFloat(totalText);
     totalElement.innerText = previousTotal + amount ;
 }
+// 3. step "updateBalance after depo-withd" 
 function updateBalance(amount, isAdd){ 
     const balanceTotal = document.getElementById('balance-total'); 
     // const balanceTotalText = balanceTotal.innerText;
@@ -25,13 +28,14 @@ function updateBalance(amount, isAdd){
     balanceTotal.innerText =  previousBalanceTotal - amount; 
     }
 }
+// 4. step "get current balance from total bank balance / limited money"
 function getCurrentBalance(){
     const balanceTotal = document.getElementById('balance-total'); 
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
     return previousBalanceTotal;
 }
-// deposit eventhandler 
+// handle deposit eventhandler 
 document.getElementById('deposit-button').addEventListener('click',function(){
     // const depositInput = document.getElementById('deposit-input');
     // const depositAmountText = depositInput.value;
@@ -58,7 +62,7 @@ document.getElementById('deposit-button').addEventListener('click',function(){
     // to clean deposit input 
     // depositInput.value = '';
 })
-// withdraw eventhandler 
+//handle withdraw eventhandler 
 document.getElementById('withdraw-button').addEventListener('click',function(){
     // const withdrawInput = document.getElementById('withdraw-input');
     // const withdrawAmountText = withdrawInput.value;
@@ -89,5 +93,5 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
     // to clean withdraw input 
     // withdrawInput.value = '';
 })
-/*
 
+/*/
